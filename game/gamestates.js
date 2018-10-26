@@ -19,7 +19,7 @@ class GameState_Start extends StateMachineState
     update()
     {
         super.update()
-
+        BomberManInst.updateScene()
 
     }
 

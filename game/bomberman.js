@@ -15,6 +15,11 @@ class BomberMan
         this.downTexture = new TexturePage("assets/whitedown.png", down_tp);
         this.player = new Player();
         this.speed = 1;
+        this.solidCollision = new RectCollider();
+        this.solidCollision.x = 16;
+        this.solidCollision.y = 0;
+        this.solidCollision.w = 16;
+        this.solidCollision.h = 16;
     }
 
     /*
@@ -118,7 +123,7 @@ class BomberMan
     updateScene()
     {
 
-        //this.player.update();
+        this.player.update();
     }
 
     /*
@@ -131,18 +136,19 @@ class BomberMan
         let line=0;
         for(let tile in mapLayout){
             let width=15;
-            let pixels=15.5;
+            let pixels=16;
             if (mapLayout[tile] == 0){
                 BomberManInst.texturePage.DrawSprite('grass',new Vector2(count*pixels,line*pixels));
             }
             else if(mapLayout[tile] == 1){
                 BomberManInst.texturePage.DrawSprite('solid',new Vector2(count*pixels,line*pixels));
-                let solidCollision = new RectCollider(count*pixels,);
-                solidCollision.x = count*pixels;
-                solidCollision.y = line*pixels;
-                solidCollision.w = pixels;
-                solidCollision.h = pixels;
-                GAZCanvas.Rect(solidCollision, 'rgb(255,0,0)', false, 5);
+                // this.solidCollision = new RectCollider(count*pixels,line*pixels);
+                // this.solidCollision.x = count*pixels;
+                // this.solidCollision.y = line*pixels;
+                // this.solidCollision.w = pixels;
+                // this.solidCollision.h = pixels;
+                //GAZCanvas.Rect(solidCollision, 'rgb(255,0,0)', false, 5);
+
             }
             count++;
             if(count==width){
@@ -151,9 +157,11 @@ class BomberMan
             }
 
         }
+        GAZCanvas.Rect(this.solidCollision, 'rgb(255,0,0)', false, 5);
     }
     drawScene()
     {
+
         //GAZCanvas.Rect(new Rect(0, 0, 240, 208),'#000000');
         this.drawMap()
         //GAZCanvas.Rect(new Rect(0, 0, 1600, 900),'#000000');
@@ -163,7 +171,7 @@ class BomberMan
         //CrappyBirdInst.texturePage.DrawSprite('bg',new Vector2(144-this.bgScrollX-1,0));
 
 
-        //BomberManInst.player.draw();
+        BomberManInst.player.draw();
 
 
         //draw the fg with wrapping offset to give the impression of scrolling / moving

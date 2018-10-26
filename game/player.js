@@ -10,10 +10,13 @@ class Player extends RectCollider
         super();
         this.manFrame = 0;
 
-        this.x = 0;
-        this.y = 0;
+        this.x = 20;
+        this.y = 18;
 
         this.isDead =false;
+        this.collided=false;
+        this.lastPosX;
+        this.lastPosY;
     }
 
     frameName()
@@ -28,8 +31,8 @@ class Player extends RectCollider
     {
         this.manFrame = 0;
 
-        this.x = 30;
-        this.y = 240/2;
+        this.x = 0;
+        this.y = 0;
 
         this.isDead =false;
     }
@@ -47,13 +50,23 @@ class Player extends RectCollider
 
             //get the size of the bird based on the size of its current frame
             //and use those values for its RectCollider
-            this.w = 14;
-            this.h = 24;
+        if (this.collides(BomberManInst.solidCollision))
+        {
+            this.collided = true;
+        }
+        else{
+            this.collided = false;
+        }
+
+            this.w = 8;
+            this.h = 12;
 
 
 
 
 
+        this.lastPosX=this.x;
+        this.lastPosY=this.y;
         if (this.isDead == false)
         {
             //If the player is alive, use the space bar || mouse buttor to let the player soar / flap
@@ -61,7 +74,7 @@ class Player extends RectCollider
                 ||(Input.getKeystate(KEYCODE_up_arrow) === INPUT_HELD)
             )
             {
-                this.y += BomberManInst.speed;
+                this.y -= BomberManInst.speed;
             }
             if ((Input.getKeystate(KEYCODE_d) === INPUT_HELD)
                 ||(Input.getKeystate(KEYCODE_right_arrow) === INPUT_HELD)
@@ -79,23 +92,37 @@ class Player extends RectCollider
                 ||(Input.getKeystate(KEYCODE_down_arrow) === INPUT_HELD)
             )
             {
-                this.y -= BomberManInst.speed;
+                this.y += BomberManInst.speed;
             }
+
+        }
+
+
+
+
+        if(this.collides(BomberManInst.solidCollision)){
+           this.x=this.lastPosX;
+           this.y=this.lastPosY;
         }
 
 
 
     }
 
-    drawInReadyMode()
-    {
-        this.manFrame = 1;
-        BomberManInst.DrawSprite('assets/solid.png',new Vector2(this.x,this.y) );
-    }
 
     draw()
     {
-        BomberManInst.DrawSprite('assets/solid.png',new Vector2(this.x,this.y) );
+
+        BomberManInst.downTexture.DrawResizedSprite('down_0',new Vector2(this.x,this.y),this.w,this.h);
+        if (this.collided == true)
+        {
+            GAZCanvas.Rect(this, 'rgb(255,255,0)', false, 5);
+        }
+        else
+        {
+            GAZCanvas.Rect(this, 'rgb(255,0,0)', false, 5);
+        }
+        //GAZCanvas.Rect(this, 'rgb(255,0,0)', false, 5);
 
     }
 }
