@@ -21,6 +21,8 @@
     <script src="lib/texturepage.js"></script>
 
     <script src="game/map.js"></script>
+    <script src="game/tile.js"></script>
+    <script src="game/bomb.js"></script>
     <script src="assets/game_tp.js"></script>
     <script src="assets/up_tp.js"></script>
     <script src="assets/right_tp.js"></script>
@@ -34,6 +36,7 @@
     <link href='https://fonts.googleapis.com/css?family=Archivo Black' rel='stylesheet'>
 </head>
 <body>
+<h3 id="debug"></h3>
 <canvas id="canvas"></canvas>
 </body>
 </html>
@@ -43,6 +46,7 @@
     document.body.scroll = "no"; // ie only
     document.body.style.padding = 0;
     document.body.style.margin = 0;
+    document.getElementById("debug").style.position='absolute';
 
     BomberManInst.Run();
 </script>

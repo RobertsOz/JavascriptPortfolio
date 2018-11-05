@@ -14,12 +14,8 @@ class BomberMan
         this.rightTexture = new TexturePage("assets/whiteright.png", right_tp);
         this.downTexture = new TexturePage("assets/whitedown.png", down_tp);
         this.player = new Player();
+        this.map = new Map();
         this.speed = 1;
-        this.solidCollision = new RectCollider();
-        this.solidCollision.x = 16;
-        this.solidCollision.y = 0;
-        this.solidCollision.w = 16;
-        this.solidCollision.h = 16;
     }
 
     /*
@@ -103,8 +99,6 @@ class BomberMan
     Start()
     {
         //this.player.init();
-
-        this.speed = 1;
         this.player.isDead = false;
     }
 
@@ -124,6 +118,7 @@ class BomberMan
     {
 
         this.player.update();
+        document.getElementById("debug").innerHTML = "X: "+ this.map.getTilePosition(this.player.x+this.player.w/2,this.player.y+this.player.h/2)[0] + " Y: " + this.map.getTilePosition(this.player.x+this.player.w/2,this.player.y+this.player.h/2)[1];
     }
 
     /*
@@ -131,45 +126,18 @@ class BomberMan
 
         Draw the layers of the game, bg first, then player and pillars finally with the fg
      */
-    drawMap(){
-        let count=0;
-        let line=0;
-        for(let tile in mapLayout){
-            let width=15;
-            let pixels=16;
-            if (mapLayout[tile] == 0){
-                BomberManInst.texturePage.DrawSprite('grass',new Vector2(count*pixels,line*pixels));
-            }
-            else if(mapLayout[tile] == 1){
-                BomberManInst.texturePage.DrawSprite('solid',new Vector2(count*pixels,line*pixels));
-                // this.solidCollision = new RectCollider(count*pixels,line*pixels);
-                // this.solidCollision.x = count*pixels;
-                // this.solidCollision.y = line*pixels;
-                // this.solidCollision.w = pixels;
-                // this.solidCollision.h = pixels;
-                //GAZCanvas.Rect(solidCollision, 'rgb(255,0,0)', false, 5);
-
-            }
-            count++;
-            if(count==width){
-                line++;
-                count=0;
-            }
-
-        }
-        GAZCanvas.Rect(this.solidCollision, 'rgb(255,0,0)', false, 5);
-    }
     drawScene()
     {
 
         //GAZCanvas.Rect(new Rect(0, 0, 240, 208),'#000000');
-        this.drawMap()
         //GAZCanvas.Rect(new Rect(0, 0, 1600, 900),'#000000');
         //draw the bg with wrapping offset to give the impression of scrolling / moving
         //Canvas.DrawSprite('assets/grass.png',new Rect(0,0,16,16));
         //CrappyBirdInst.texturePage.DrawSprite('bg',new Vector2(-this.bgScrollX,0));
         //CrappyBirdInst.texturePage.DrawSprite('bg',new Vector2(144-this.bgScrollX-1,0));
 
+        this.map.draw();
+        //GAZCanvas.Rect(this.solidCollision, 'rgb(255,0,0)', false, 5);
 
         BomberManInst.player.draw();
 

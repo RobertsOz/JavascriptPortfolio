@@ -12,8 +12,17 @@ game_tp.lookup["block"] = new Rect(18,0,16,16);
 game_tp.lookup["solid"] = new Rect(36,0,16,16);
 
 game_tp.lookup["startfire"] = new Rect(54,0,16,16);
-game_tp.lookup["middlefire"] = new Rect(72,0,16,16);
-game_tp.lookup["endfire"] = new Rect(90,0,16,16);
+game_tp.lookup["middlefireright"] = new Rect(72,0,16,16);
+game_tp.lookup["endfireright"] = new Rect(90,0,16,16);
+
+game_tp.lookup["middlefiredown"] = new Rect(208,18,16,16);
+game_tp.lookup["endfiredown"] = new Rect(226,18,16,16);
+
+game_tp.lookup["middlefireleft"] = new Rect(190,18,16,16);
+game_tp.lookup["endfireleft"] = new Rect(172,18,16,16);
+
+game_tp.lookup["middlefireup"] = new Rect(136,18,16,16);
+game_tp.lookup["endfireup"] = new Rect(154,18,16,16);
 
 game_tp.lookup["bombs"] = new Rect(108,0,16,16);
 game_tp.lookup["push"] = new Rect(126,0,16,16);
