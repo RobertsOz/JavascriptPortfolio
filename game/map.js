@@ -74,14 +74,21 @@ class Map
         return Colliders;
     }
     shouldCollideTop(positionXY){
-        if(this.mapLayout[positionXY[1]-1][positionXY[0]].hasCollision){
-            return true;
+        try{
+            if(this.mapLayout[positionXY[1]-1][positionXY[0]].hasCollision){
+                return true;
+            }
+            else{
+                return false;
+            }
         }
-        else{
+        catch(e){
+            console.log("shouldCollideTop Failed",e)
             return false;
         }
+
     }
-    checkBomb(x,y,brk){
+    checkBomb(x,y,brk,brkcount,i){
         if(x>=0 && y>0 && x<this.w && y<this.h){
             if (brk==false){
                 if(this.mapLayout[y][x].tile == "grass"){
@@ -91,13 +98,27 @@ class Map
                     return false;
                 }
                 else if(this.mapLayout[y][x].tile == "block"){
-                    this.mapLayout[y][x].tile = "grass";
-                    this.mapLayout[y][x].hasCollision=false;
+                    let random = Math.floor(Math.random() * 6) + 1; // random between 1-6
+                    if(random>3){                                   //50%
+                        BomberManInst.upgradeList.push(new Upgrade(BomberManInst.upgrades[Math.floor(Math.random()*4)],x,y));
+                    }
+                    this.mapLayout[y][x]= new Tile(0,x,y);
                     return false;
                 }
             }
-            return false;
+            else if(i<=brkcount+1){
+                if(this.mapLayout[y][x].tile == "grass"){
+                    return true;
+                }
+                else if(this.mapLayout[y][x].tile == "solid"){
+                    return false;
+                }
+                else{
+                    return false;
+                }
+            }
         }
+        return false;
     }
 
 }
