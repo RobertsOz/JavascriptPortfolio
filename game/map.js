@@ -39,12 +39,12 @@ class Map
     getTile(x,y){
         return this.mapLayout[y][x];
     }
-    getTilePosition(x,y){
+    getTilePosition(x,y){//transform a point on the map into the tile position on the map
         let tileXpos = Math.floor(x/this.pixels);
         let tileYpos = Math.floor(y/this.pixels);
         return [tileXpos,tileYpos];
     }
-    getCollidersAround(positionXY){
+    getCollidersAround(positionXY){//Get all tiles with collission around the specified tile
         let xPos = positionXY[0];
         let yPos = positionXY[1];
         let firstX= xPos-1;
@@ -74,6 +74,11 @@ class Map
         return Colliders;
     }
     shouldCollideTop(positionXY){
+        /*
+        Check if you should be colliding with the top of a tile
+        If a player is running left and up against a wall, the up collision will register first
+        ,but if there is no tile above the player that collision should be ignored
+        */
         try{
             if(this.mapLayout[positionXY[1]-1][positionXY[0]].hasCollision){
                 return true;
@@ -89,6 +94,10 @@ class Map
 
     }
     checkBomb(x,y,brk,brkcount,i){
+        /*
+        Check if a fire destroys something or it collides with something then
+        if has already collided before the fire should not be drawn.
+        */
         if(x>=0 && y>0 && x<this.w && y<this.h){
             if (brk==false){
                 if(this.mapLayout[y][x].tile == "grass"){

@@ -34,16 +34,17 @@ class Player extends RectCollider
 
     frameName()
     {
-        //the bird has 3 frames [0,1,2] to get the text name of the current frame, it's bird_[frame]
-        //doing it here reduces the amount of copypasta
+        //player has 8 frames [0,1,2,3,4,5,6,7] to get the text name of the current frame, it's color_direction_[name]
 
         return this.playerColor+'_'+this.direction+'_'+Math.floor(this.manFrame);
     }
     deadFrameName(){
+        //the death frame name same as above
         return 'death_'+Math.floor(this.deathFrame);
     }
     init()
     {
+        //init values used when the game is started again
         this.x= this.startPos[0];
         this.y= this.startPos[1];
         this.deathFrame = 0;
@@ -58,27 +59,20 @@ class Player extends RectCollider
     update()
     {
 
-
-            //update the bird's animation frames very slowly
-
-
+            //loop the animation frame back to 0
             if (this.manFrame >= 7)
             {
                 this.manFrame -= 7;
             }
 
-            //get the size of the bird based on the size of its current frame
-            //and use those values for its RectCollider
-
-
-
-
-
-
 
         if (this.isDead == false)
         {
-            //If the player is alive, use the space bar || mouse buttor to let the player soar / flap
+            /*
+            If the player is alive, depending on if its player 1 or 2 use WASD or arrow keys to move and Space or Enter to place bomb
+            Moving increases or decreases the delta y or delta x values by the players speed
+            Sets the direction to the key that is held down for the animation to use
+            */
             if(this.id===1){
                 if (Input.getKeystate(KEYCODE_w) === INPUT_HELD)
                 {
@@ -135,17 +129,19 @@ class Player extends RectCollider
                     }
                 }
             }
-
+            //set the position of the player once the keys have been registered
             this.x += this.dx;
             this.y += this.dy;
 
             if(this.dx>0 || this.dx<0 || this.dy>0 || this.dy<0){
+                //set the animation frame if the player did move based on the players speed
                 this.manFrame += this.speed / 4;
             }
 
 
 
-        this.topCollision=false;
+        this.topCollision=false;//boolean to check top collision logic
+            //check if the player is colliding with any bombs
         for (let bomb in BomberManInst.bombList){
             if(BomberManInst.bombList[bomb].finished===false){
                 if(this.collides(BomberManInst.bombList[bomb].collision)=="top" || this.collides(BomberManInst.bombList[bomb].collision)=="bottom"){
@@ -157,6 +153,7 @@ class Player extends RectCollider
                 }
             }
         }
+        //check if the player touched any upgrade and what to do with that particular upgrade
         if(BomberManInst.upgradeList.length>0){
             for (let upgrade in BomberManInst.upgradeList){
                 if(this.collides(BomberManInst.upgradeList[upgrade].collision)!=false){
@@ -169,7 +166,7 @@ class Player extends RectCollider
 
                     }
                     else if(BomberManInst.upgradeList[upgrade].upgrade == "speed"){
-                        this.updateSpeed=true;
+                        this.updateSpeed=true;//update the speed when the collision has been done and the player is not in risk of walking trough a wall
                     }
                     else if(BomberManInst.upgradeList[upgrade].upgrade == "fire"){
                         this.strenght++;
@@ -178,12 +175,14 @@ class Player extends RectCollider
                 }
             }
         }
+        //get the colliders around the player using the center of the player rect
         this.collidersAroundPlayer = BomberManInst.map.getCollidersAround(BomberManInst.map.getTilePosition(this.x+this.w/2,this.y+this.h/2))
+            //loop trough those collisions
         for (let i=0;i<this.collidersAroundPlayer.length;i++)
         {
             if(this.collides(this.collidersAroundPlayer[i])=="top" || this.collides(this.collidersAroundPlayer[i])=="bottom"){
                 if(this.collides(this.collidersAroundPlayer[i])=="top"){
-                    this.topCollision=true;
+                    this.topCollision=true;//detected a collision top
                 }
                 this.y-=this.dy;
                 this.collided=true;
@@ -203,6 +202,7 @@ class Player extends RectCollider
                 }
             }
         }
+        //check if the player touched a fire and kill him if he did
         if(BomberManInst.fireList.length>0){
             for (let fire in BomberManInst.fireList){
                 for(let col in BomberManInst.fireList[fire])
@@ -215,25 +215,28 @@ class Player extends RectCollider
         }
 
 
-
+        //reset the delta move direction back to 0
         this.dx = 0;
         this.dy = 0;
+        //reset the collided back to false
         this.collided=false;
         }
-        else {
-            if(this.deathFrame<=4){
+        else {//if the player died play the dead animation
+            if(this.deathFrame<=4){//stop the animation when its at the end
                 this.deathFrame += this.speed / 10;
             }
         }
 
     }
     placeBomb(){
+        //add a bomb to the bombList at the position of the player
         BomberManInst.bombList.push(new Bomb(BomberManInst.map.getTilePosition(this.x+this.w/2,this.y+this.h/2),this.strenght,this.playerColor))
     }
 
     draw()
     {
         if(this.isDead == false){
+            //draw the player animation
             if(this.direction=="down"){
                 BomberManInst.downTexture.DrawResizedSprite(this.frameName(),new Vector2(this.x,this.y),this.w,this.h);
             }
@@ -248,19 +251,15 @@ class Player extends RectCollider
             }
         }
         else{
+            //draw the death animation
             if(this.deathFrame<=4){
                 BomberManInst.deathTexture.DrawResizedSprite(this.deadFrameName(),new Vector2(this.x,this.y),this.w,this.h);
             }
-            else{
+            else{//when the animation is done display the results.
                 BomberManInst.stateMachine.setState(GameState_Death.label());
             }
 
         }
-
-        //GAZCanvas.Rect(this, this.color, false, 5);
-
-
-        //GAZCanvas.Rect(this, 'rgb(255,0,0)', false, 5);
 
     }
 }

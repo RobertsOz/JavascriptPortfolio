@@ -1,7 +1,7 @@
 class Tile {
     constructor(id,x,y){
-        this.pixels = 16;
-        this.id=id;
+        this.pixels = 16;//size of a tile
+        this.id=id;//number from map array
         this.x=x;
         this.y=y;
         if(this.id==0){
@@ -28,7 +28,7 @@ class Tile {
             }
         }
 
-
+        //make collision based on the block
         if(Boolean(this.hasCollision)){
             this.collision= new RectCollider();
             this.collision.w=this.pixels;

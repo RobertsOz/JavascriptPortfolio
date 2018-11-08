@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b264b30-7585-4486-8ab1-e74daf84dd37" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/death_tp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/title_tp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/upgrade.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/down_tp.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/down_tp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/right_tp.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/right_tp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/up_tp.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/up_tp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/bomb.js" beforeDir="false" afterPath="$PROJECT_DIR$/game/bomb.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/bomberman.js" beforeDir="false" afterPath="$PROJECT_DIR$/game/bomberman.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/gamestates.js" beforeDir="false" afterPath="$PROJECT_DIR$/game/gamestates.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/game/map.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/game/player.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/tile.js" beforeDir="false" afterPath="$PROJECT_DIR$/game/tile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/upgrade.js" beforeDir="false" afterPath="$PROJECT_DIR$/game/upgrade.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/rectcollider.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/rectcollider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/texturepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/texturepage.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,131 +29,48 @@
     <session id="-686565447">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.4" value="6" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.4" value="7" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="5" />
-          <entry key="js" value="113" />
+          <entry key="js" value="117" />
           <entry key="ts" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="5" />
-          <entry key="JavaScript" value="113" />
+          <entry key="JavaScript" value="117" />
           <entry key="TypeScript" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="278" />
-          <entry key="js" value="18821" />
+          <entry key="js" value="23474" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="278" />
-          <entry key="JavaScript" value="18821" />
+          <entry key="JavaScript" value="23474" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game/player.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="200" column="38" selection-start-line="200" selection-start-column="38" selection-end-line="200" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game/bomb.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-177">
-              <caret line="42" column="35" lean-forward="true" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game/upgrade.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/title_tp.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/game/map.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="101" column="31" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game/tile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game/gamestates.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="147" column="33" lean-forward="true" selection-start-line="147" selection-start-column="33" selection-end-line="147" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game/bomberman.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2227">
-              <caret line="131" column="29" lean-forward="true" selection-start-line="131" selection-start-column="29" selection-end-line="131" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/game_tp.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="46" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="721">
+              <caret line="261" column="9" selection-start-line="261" selection-start-column="9" selection-end-line="261" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -173,7 +86,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>player.u</find>
       <find>colider</find>
       <find>collider</find>
       <find>for</find>
@@ -203,6 +115,7 @@
       <find>hasCollision</find>
       <find>BomberManInst.player</find>
       <find>init</find>
+      <find>Start</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -211,24 +124,24 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/game/tile.js" />
         <option value="$PROJECT_DIR$/lib/gazcanvas.js" />
-        <option value="$PROJECT_DIR$/lib/texturepage.js" />
         <option value="$PROJECT_DIR$/lib/canvas.js" />
         <option value="$PROJECT_DIR$/assets/game_tp.js" />
         <option value="$PROJECT_DIR$/assets/death_tp.js" />
         <option value="$PROJECT_DIR$/assets/down_tp.js" />
         <option value="$PROJECT_DIR$/assets/right_tp.js" />
         <option value="$PROJECT_DIR$/assets/up_tp.js" />
-        <option value="$PROJECT_DIR$/lib/rectcollider.js" />
-        <option value="$PROJECT_DIR$/game/upgrade.js" />
-        <option value="$PROJECT_DIR$/game/bomb.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/assets/title_tp.js" />
-        <option value="$PROJECT_DIR$/game/bomberman.js" />
-        <option value="$PROJECT_DIR$/game/gamestates.js" />
-        <option value="$PROJECT_DIR$/game/player.js" />
+        <option value="$PROJECT_DIR$/lib/rectcollider.js" />
+        <option value="$PROJECT_DIR$/lib/texturepage.js" />
+        <option value="$PROJECT_DIR$/game/tile.js" />
         <option value="$PROJECT_DIR$/game/map.js" />
+        <option value="$PROJECT_DIR$/game/gamestates.js" />
+        <option value="$PROJECT_DIR$/game/bomberman.js" />
+        <option value="$PROJECT_DIR$/game/upgrade.js" />
+        <option value="$PROJECT_DIR$/game/bomb.js" />
+        <option value="$PROJECT_DIR$/game/player.js" />
       </list>
     </option>
   </component>
@@ -252,6 +165,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -273,7 +187,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -332,16 +245,18 @@
       <workItem from="1541342768564" duration="34374000" />
       <workItem from="1541536126433" duration="2879000" />
       <workItem from="1541596021143" duration="38358000" />
+      <workItem from="1541677965927" duration="5320000" />
+      <workItem from="1541689656134" duration="3036000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124020000" />
+    <option name="totallyTimeSpent" value="132376000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13804004" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13804004" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -524,23 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/texturepage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="670">
-          <caret line="47" column="35" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/statemachine.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="111" column="4" selection-start-line="111" selection-start-column="4" selection-end-line="111" selection-end-column="4" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/input_keycodes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -555,16 +453,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/rectcollider.js">
+    <entry file="file://$PROJECT_DIR$/assets/title_tp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="39" column="55" lean-forward="true" selection-start-line="39" selection-start-column="55" selection-end-line="39" selection-end-column="55" />
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/game_tp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="51">
           <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="46" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -572,66 +470,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/bomberman.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2227">
-          <caret line="131" column="29" lean-forward="true" selection-start-line="131" selection-start-column="29" selection-end-line="131" selection-end-column="29" />
+        <state relative-caret-position="510">
+          <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/rectcollider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="51" column="54" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/texturepage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game/tile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/title_tp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/gamestates.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="147" column="33" lean-forward="true" selection-start-line="147" selection-start-column="33" selection-end-line="147" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/bomb.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-177">
-          <caret line="42" column="35" lean-forward="true" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/player.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="200" column="38" selection-start-line="200" selection-start-column="38" selection-end-line="200" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/upgrade.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        <state relative-caret-position="340">
+          <caret line="20" column="77" lean-forward="true" selection-start-line="20" selection-start-column="77" selection-end-line="20" selection-end-column="77" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="101" column="31" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="31" />
+        <state relative-caret-position="194">
+          <caret line="98" column="68" selection-start-line="98" selection-start-column="68" selection-end-line="98" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/statemachine.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="809">
+          <caret line="111" column="4" selection-start-line="111" selection-start-column="4" selection-end-line="111" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/gamestates.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="97" column="20" selection-start-line="97" selection-start-column="20" selection-end-line="97" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/bomberman.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="175" column="34" lean-forward="true" selection-start-line="175" selection-start-column="34" selection-end-line="175" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/upgrade.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="98" selection-start-line="23" selection-start-column="98" selection-end-line="23" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/bomb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="687">
+          <caret line="134" column="114" selection-start-line="134" selection-start-column="114" selection-end-line="134" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="261" column="9" selection-start-line="261" selection-start-column="9" selection-end-line="261" selection-end-column="9" />
         </state>
       </provider>
     </entry>
